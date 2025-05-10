@@ -1,0 +1,26 @@
+{
+	"name": "ds_daily_Json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ds_azure_daily_data",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "daliy_earthquqke_data.json",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@formatDateTime(utcNow(),'yyyy-MM-dd')\n",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze-layer"
+			}
+		},
+		"schema": {}
+	}
+}
