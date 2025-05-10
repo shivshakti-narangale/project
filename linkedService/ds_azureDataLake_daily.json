@@ -1,0 +1,10 @@
+{
+	"name": "ds_azureDataLake_daily",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://earthquakegptl.dfs.core.windows.net/"
+		}
+	}
+}
